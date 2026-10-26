@@ -1,0 +1,164 @@
+{
+  "name": "Textizo - Scatter Spin",
+  "text": "WHOOSH!",
+  "font": "Arial Black",
+  "style": "Regular",
+  "size": 2.3,
+  "center": [
+    0.5,
+    0.5
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "letters",
+      "start": 0,
+      "span": 4.0,
+      "delay": 2.0,
+      "from": 0,
+      "to": 1,
+      "ease": "out_quad"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 0,
+      "span": 8.0,
+      "delay": 2.0,
+      "from": 0.12,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "size": {
+      "by": "letters",
+      "start": 0,
+      "span": 13.994,
+      "delay": 2.001,
+      "from": 0.4,
+      "to": 1,
+      "ease": "out_back"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 0,
+      "span": 13.994,
+      "delay": 2.001,
+      "from": -360,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "explosion": {
+      "by": "letters",
+      "start": 0,
+      "span": 13.994,
+      "delay": 2.001,
+      "from": 0.4,
+      "to": 0,
+      "ease": "out_back",
+      "variance": 0.3,
+      "damping": 0,
+      "spin_x": 0,
+      "spin_y": 0,
+      "spin_z": 0,
+      "pre_roll": 0,
+      "reverse": false
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "letters",
+      "start": 100,
+      "span": 10.0,
+      "delay": 1.5,
+      "to": 0,
+      "ease": "in_quad"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 100,
+      "span": 10.0,
+      "delay": 1.5,
+      "to": 0.12,
+      "ease": "in_quad"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 100,
+      "span": 10.0,
+      "delay": 1.5,
+      "to": 360,
+      "ease": "in_cubic"
+    },
+    "explosion": {
+      "by": "letters",
+      "start": 100,
+      "span": 10.0,
+      "delay": 1.5,
+      "to": 0.5,
+      "ease": "in_cubic",
+      "variance": 0.3,
+      "damping": 0,
+      "spin_x": 0,
+      "spin_y": 0,
+      "spin_z": 0,
+      "pre_roll": 0,
+      "reverse": false
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        1,
+        0.5,
+        0.08
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "2": {
+      "appearance": "outline",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.0086,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 0.85,
+      "thickness": 0.02,
+      "offset": [
+        0.0057,
+        -0.0115
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": {
+    "shutter": 180,
+    "quality": 2,
+    "bias": 0,
+    "spread": 1
+  }
+}

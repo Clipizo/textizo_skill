@@ -1,0 +1,125 @@
+{
+  "name": "Textizo-10A",
+  "text": "YOU GOT THIS",
+  "font": "Arial Black",
+  "style": "Regular",
+  "size": 1.45,
+  "center": [
+    0.5,
+    0.4409
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "words",
+      "start": 0,
+      "span": 3.0,
+      "delay": 6.0,
+      "from": 0,
+      "to": 1,
+      "ease": "out_quad"
+    },
+    "position": {
+      "by": "words",
+      "start": 0,
+      "span": 16.0,
+      "delay": 6.0,
+      "from": [
+        0.0,
+        0.5
+      ],
+      "to": [
+        0.0,
+        0.0
+      ],
+      "ease": "out_bounce"
+    },
+    "rotation": {
+      "by": "words",
+      "start": 0,
+      "span": 16.0,
+      "delay": 6.0,
+      "from": -8,
+      "to": 0,
+      "ease": "out_elastic"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "words",
+      "start": 101,
+      "span": 9.003,
+      "delay": 1.999,
+      "to": 0,
+      "ease": "in_cubic"
+    },
+    "position": {
+      "by": "words",
+      "start": 101,
+      "span": 9.003,
+      "delay": 1.999,
+      "to": [
+        0.0,
+        -0.6
+      ],
+      "ease": "in_back"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        1,
+        0.8392,
+        0.0392
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "2": {
+      "appearance": "outline",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.0054,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 0.85,
+      "thickness": 0.02,
+      "offset": [
+        0.0036,
+        -0.0072
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": {
+    "shutter": 180,
+    "quality": 2,
+    "bias": 0,
+    "spread": 1
+  }
+}

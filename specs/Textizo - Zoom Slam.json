@@ -1,0 +1,133 @@
+{
+  "name": "Textizo - Zoom Slam",
+  "text": "BOOM!",
+  "font": "Arial Black",
+  "style": "Regular",
+  "size": 2.8,
+  "center": [
+    0.5,
+    0.5
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "letters",
+      "start": 0,
+      "span": 4.0,
+      "delay": 2.0,
+      "from": 0,
+      "to": 1,
+      "ease": "out_quad"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 0,
+      "span": 9.004,
+      "delay": 1.999,
+      "from": 0.2,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "size": {
+      "by": "letters",
+      "start": 0,
+      "span": 10.0,
+      "delay": 2.0,
+      "from": 4,
+      "to": 1,
+      "ease": "out_back"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 0,
+      "span": 10.0,
+      "delay": 2.0,
+      "from": 25,
+      "to": 0,
+      "ease": "out_back"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "letters",
+      "start": 100,
+      "span": 7.991,
+      "delay": 1.502,
+      "to": 0,
+      "ease": "in_quad"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 100,
+      "span": 7.991,
+      "delay": 1.502,
+      "to": 0.2,
+      "ease": "in_quad"
+    },
+    "size": {
+      "by": "letters",
+      "start": 100,
+      "span": 7.991,
+      "delay": 1.502,
+      "to": 3.5,
+      "ease": "in_cubic"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        1,
+        0.84,
+        0.05
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "2": {
+      "appearance": "outline",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.0105,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 0.85,
+      "thickness": 0.02,
+      "offset": [
+        0.007,
+        -0.014
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": {
+    "shutter": 180,
+    "quality": 2,
+    "bias": 0,
+    "spread": 1
+  }
+}

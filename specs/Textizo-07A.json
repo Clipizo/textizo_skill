@@ -1,0 +1,113 @@
+{
+  "name": "Textizo-07A",
+  "text": "Happy Anniversary",
+  "font": "Georgia",
+  "style": "Regular",
+  "size": 1.41,
+  "center": [
+    0.5,
+    0.4426
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "letters",
+      "start": 0,
+      "span": 20.0,
+      "delay": 2.0,
+      "from": 0,
+      "to": 1,
+      "ease": "in_out_sine"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 0,
+      "span": 24.053,
+      "delay": 1.996,
+      "from": 0.1,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "position": {
+      "by": "letters",
+      "start": 0,
+      "span": 25.986,
+      "delay": 2.001,
+      "from": [
+        0.0,
+        -0.03
+      ],
+      "to": [
+        0.0,
+        0.0
+      ],
+      "ease": "out_cubic"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "letters",
+      "start": 89,
+      "span": 12.027,
+      "delay": 0.998,
+      "to": 0,
+      "ease": "in_out_sine"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 89,
+      "span": 12.027,
+      "delay": 0.998,
+      "to": 0.1,
+      "ease": "in_quad"
+    },
+    "position": {
+      "by": "letters",
+      "start": 89,
+      "span": 12.027,
+      "delay": 0.998,
+      "to": [
+        0.0,
+        0.03
+      ],
+      "ease": "in_quad"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        0.9137,
+        0.7686,
+        0.4157
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 0.55,
+      "thickness": 0.02,
+      "offset": [
+        0.0028,
+        -0.0056
+      ],
+      "softness": 0.05
+    }
+  },
+  "motion_blur": false
+}

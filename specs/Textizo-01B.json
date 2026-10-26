@@ -1,0 +1,176 @@
+{
+  "name": "Textizo-01B",
+  "text": "FIESTA TIME!",
+  "font": "Arial Black",
+  "style": "Regular",
+  "size": 1.62,
+  "center": [
+    0.5,
+    0.434
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "letters",
+      "start": 0,
+      "span": 1.482,
+      "delay": 1.752,
+      "from": 0,
+      "to": 1,
+      "ease": "out_quad"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 0,
+      "span": 1.482,
+      "delay": 1.752,
+      "from": 0.12,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "position": {
+      "by": "letters",
+      "start": 0,
+      "span": 1.482,
+      "delay": 1.752,
+      "from": [
+        0.0,
+        -0.12
+      ],
+      "to": [
+        0.0,
+        0.0
+      ],
+      "ease": "out_back"
+    },
+    "size": {
+      "by": "letters",
+      "start": 0,
+      "span": 1.482,
+      "delay": 1.752,
+      "from": 0,
+      "to": 1,
+      "ease": "out_elastic"
+    },
+    "tracking": {
+      "by": "letters",
+      "start": 0,
+      "span": 18.0,
+      "delay": 0.0,
+      "from": 0.05,
+      "to": 0,
+      "ease": "out_back"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 0,
+      "span": 1.482,
+      "delay": 1.752,
+      "from": -120,
+      "to": 0,
+      "ease": "out_back"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "letters",
+      "start": 98,
+      "span": 5.993,
+      "delay": 1.001,
+      "to": 0,
+      "ease": "in_cubic"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 98,
+      "span": 5.993,
+      "delay": 1.001,
+      "to": 0.1,
+      "ease": "in_quad"
+    },
+    "position": {
+      "by": "letters",
+      "start": 98,
+      "span": 5.993,
+      "delay": 1.001,
+      "to": [
+        0.0,
+        0.1
+      ],
+      "ease": "in_back"
+    },
+    "size": {
+      "by": "letters",
+      "start": 98,
+      "span": 5.993,
+      "delay": 1.001,
+      "to": 0,
+      "ease": "in_back"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 98,
+      "span": 5.993,
+      "delay": 1.001,
+      "to": 180,
+      "ease": "in_back"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        1,
+        0.1804,
+        0.5333
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "2": {
+      "appearance": "outline",
+      "color": [
+        1,
+        0.902,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.0061,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0.3569,
+        0.102,
+        0.5608
+      ],
+      "opacity": 0.85,
+      "thickness": 0.02,
+      "offset": [
+        0.0041,
+        -0.0081
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": {
+    "shutter": 180,
+    "quality": 2,
+    "bias": 0,
+    "spread": 1
+  }
+}

@@ -1,0 +1,8875 @@
+{
+ "product": "Textizo",
+ "version": "1.0",
+ "inputs": {
+  "StateVersion": {
+   "label": "State Version",
+   "page": "Text",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 11,
+   "hidden": true
+  },
+  "TextEdited": {
+   "label": "Text Edited",
+   "page": "Text",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "InEnable": {
+   "label": "Enable",
+   "page": "Text",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 1,
+   "integer": true
+  },
+  "StyledText": {
+   "label": "",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": ""
+  },
+  "BakedText": {
+   "label": "Baked Text",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "internal",
+   "default": "",
+   "hidden": true
+  },
+  "BakedCLSData": {
+   "label": "Baked CLS Data",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "internal",
+   "default": "",
+   "hidden": true
+  },
+  "BakedFont": {
+   "label": "Baked Font",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "internal",
+   "default": "",
+   "hidden": true
+  },
+  "BakedStyle": {
+   "label": "Baked Style",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "internal",
+   "default": "",
+   "hidden": true
+  },
+  "BakedFontSource": {
+   "label": "Baked Font Source",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "internal",
+   "default": "",
+   "hidden": true
+  },
+  "BakedStyleSource": {
+   "label": "Baked Style Source",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "internal",
+   "default": "",
+   "hidden": true
+  },
+  "ManualFontOverride": {
+   "label": "Manual Font Override",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "internal",
+   "default": "",
+   "hidden": true
+  },
+  "ManualStyleOverride": {
+   "label": "Manual Style Override",
+   "page": "Text",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "internal",
+   "default": "",
+   "hidden": true
+  },
+  "Font": {
+   "label": "Font",
+   "page": "Text",
+   "type": "Text",
+   "control": "FontFileControl",
+   "role": "public",
+   "default": "Arial"
+  },
+  "Style": {
+   "label": "Style",
+   "page": "Text",
+   "type": "Text",
+   "control": "FontFileControl",
+   "role": "public",
+   "default": "Regular"
+  },
+  "Center": {
+   "label": "Center",
+   "page": "Text",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0.5,
+    0.5
+   ]
+  },
+  "Size": {
+   "label": "Size",
+   "page": "Text",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "min": 0.0001,
+   "max": 50,
+   "slider": [
+    0.01,
+    4
+   ]
+  },
+  "Tracking": {
+   "label": "Tracking",
+   "page": "Text",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -0.05,
+    0.2
+   ]
+  },
+  "LineSpacing": {
+   "label": "Line Spacing",
+   "page": "Text",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.5,
+    3
+   ]
+  },
+  "Alignment": {
+   "label": "Alignment",
+   "page": "Text",
+   "type": "Number",
+   "control": "MultiButtonControl",
+   "role": "public",
+   "default": 1,
+   "options": [
+    {
+     "label": "Left"
+    },
+    {
+     "label": "Center"
+    },
+    {
+     "label": "Right"
+    }
+   ],
+   "integer": true
+  },
+  "Rotation": {
+   "label": "Rotation",
+   "page": "Text",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -360,
+    360
+   ]
+  },
+  "Red": {
+   "label": "Red",
+   "page": "Text",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "Green": {
+   "label": "Green",
+   "page": "Text",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "Blue": {
+   "label": "Blue",
+   "page": "Text",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "Alpha": {
+   "label": "Alpha",
+   "page": "Text",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingActiveElement": {
+   "label": "Element",
+   "page": "Shading",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "element_1",
+     "label": "1"
+    },
+    {
+     "id": "element_2",
+     "label": "2"
+    },
+    {
+     "id": "element_3",
+     "label": "3"
+    },
+    {
+     "id": "element_4",
+     "label": "4"
+    },
+    {
+     "id": "element_5",
+     "label": "5"
+    },
+    {
+     "id": "element_6",
+     "label": "6"
+    },
+    {
+     "id": "element_7",
+     "label": "7"
+    },
+    {
+     "id": "element_8",
+     "label": "8"
+    }
+   ],
+   "default": "element_1"
+  },
+  "ShadingProxyEnable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 1,
+   "integer": true
+  },
+  "ShadingProxyAppearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true
+  },
+  "ShadingProxyOpacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingProxyThickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingProxyOffset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ]
+  },
+  "ShadingProxySoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ]
+  },
+  "ShadingProxySoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ]
+  },
+  "ShadingProxyBorderLevel": {
+   "label": "Border",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingProxyBorderExtendX": {
+   "label": "Extend X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingProxyBorderExtendY": {
+   "label": "Extend Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingProxyBorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingProxyColorMode": {
+   "label": "Fill",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true
+  },
+  "ShadingProxyGradient": {
+   "label": "Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingProxyGradientAngle": {
+   "label": "Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingProxyMappingSize": {
+   "label": "Scale",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingProxyMappingAspect": {
+   "label": "Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingProxyMappingLevel": {
+   "label": "Span",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingProxyGradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingProxyGradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingProxyRed": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingProxyGreen": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingProxyBlue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingProxyAlpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingProxyEndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingProxyEndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingProxyEndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingProxyEndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ]
+  },
+  "ShadingElement1Enable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 1,
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement1Appearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement1Opacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1Thickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1Offset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "ShadingElement1SoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1SoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1BorderLevel": {
+   "label": "Border Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement1BorderExtendX": {
+   "label": "Extend Horizontal",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement1BorderExtendY": {
+   "label": "Extend Vertical",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement1BorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1ColorMode": {
+   "label": "Color Mode",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement1Gradient": {
+   "label": "Shading Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingElement1GradientSeedPending": {
+   "label": "Gradient Seed Pending",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "internal",
+   "default": 1,
+   "hidden": true
+  },
+  "ShadingElement1GradientAngle": {
+   "label": "Mapping Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingElement1MappingSize": {
+   "label": "Mapping Size",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement1MappingAspect": {
+   "label": "Mapping Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement1MappingLevel": {
+   "label": "Mapping Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Character"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement1GradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement1GradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement1Red": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1Green": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1Blue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1Alpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1EndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1EndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1EndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement1EndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2Enable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement2Appearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 1,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement2Opacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2Thickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.004,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2Offset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "ShadingElement2SoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2SoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2BorderLevel": {
+   "label": "Border Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement2BorderExtendX": {
+   "label": "Extend Horizontal",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement2BorderExtendY": {
+   "label": "Extend Vertical",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement2BorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2ColorMode": {
+   "label": "Color Mode",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement2Gradient": {
+   "label": "Shading Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingElement2GradientSeedPending": {
+   "label": "Gradient Seed Pending",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "internal",
+   "default": 1,
+   "hidden": true
+  },
+  "ShadingElement2GradientAngle": {
+   "label": "Mapping Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingElement2MappingSize": {
+   "label": "Mapping Size",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement2MappingAspect": {
+   "label": "Mapping Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement2MappingLevel": {
+   "label": "Mapping Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Character"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement2GradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement2GradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement2Red": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2Green": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2Blue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2Alpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2EndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2EndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2EndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement2EndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3Enable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement3Appearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement3Opacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3Thickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3Offset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "ShadingElement3SoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.01,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3SoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.01,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3BorderLevel": {
+   "label": "Border Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement3BorderExtendX": {
+   "label": "Extend Horizontal",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement3BorderExtendY": {
+   "label": "Extend Vertical",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement3BorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3ColorMode": {
+   "label": "Color Mode",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement3Gradient": {
+   "label": "Shading Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingElement3GradientSeedPending": {
+   "label": "Gradient Seed Pending",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "internal",
+   "default": 1,
+   "hidden": true
+  },
+  "ShadingElement3GradientAngle": {
+   "label": "Mapping Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingElement3MappingSize": {
+   "label": "Mapping Size",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement3MappingAspect": {
+   "label": "Mapping Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement3MappingLevel": {
+   "label": "Mapping Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Character"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement3GradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement3GradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement3Red": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3Green": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3Blue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3Alpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3EndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3EndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3EndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement3EndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4Enable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement4Appearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 2,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement4Opacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4Thickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4Offset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "ShadingElement4SoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4SoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4BorderLevel": {
+   "label": "Border Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement4BorderExtendX": {
+   "label": "Extend Horizontal",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement4BorderExtendY": {
+   "label": "Extend Vertical",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement4BorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4ColorMode": {
+   "label": "Color Mode",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement4Gradient": {
+   "label": "Shading Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingElement4GradientSeedPending": {
+   "label": "Gradient Seed Pending",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "internal",
+   "default": 1,
+   "hidden": true
+  },
+  "ShadingElement4GradientAngle": {
+   "label": "Mapping Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingElement4MappingSize": {
+   "label": "Mapping Size",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement4MappingAspect": {
+   "label": "Mapping Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement4MappingLevel": {
+   "label": "Mapping Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Character"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement4GradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement4GradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement4Red": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4Green": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4Blue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4Alpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4EndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4EndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4EndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement4EndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5Enable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement5Appearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement5Opacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5Thickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5Offset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "ShadingElement5SoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5SoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5BorderLevel": {
+   "label": "Border Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement5BorderExtendX": {
+   "label": "Extend Horizontal",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement5BorderExtendY": {
+   "label": "Extend Vertical",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement5BorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5ColorMode": {
+   "label": "Color Mode",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement5Gradient": {
+   "label": "Shading Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingElement5GradientSeedPending": {
+   "label": "Gradient Seed Pending",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "internal",
+   "default": 1,
+   "hidden": true
+  },
+  "ShadingElement5GradientAngle": {
+   "label": "Mapping Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingElement5MappingSize": {
+   "label": "Mapping Size",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement5MappingAspect": {
+   "label": "Mapping Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement5MappingLevel": {
+   "label": "Mapping Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Character"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement5GradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement5GradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement5Red": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5Green": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5Blue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5Alpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5EndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5EndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5EndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement5EndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6Enable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement6Appearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement6Opacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6Thickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6Offset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "ShadingElement6SoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6SoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6BorderLevel": {
+   "label": "Border Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement6BorderExtendX": {
+   "label": "Extend Horizontal",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement6BorderExtendY": {
+   "label": "Extend Vertical",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement6BorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6ColorMode": {
+   "label": "Color Mode",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement6Gradient": {
+   "label": "Shading Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingElement6GradientSeedPending": {
+   "label": "Gradient Seed Pending",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "internal",
+   "default": 1,
+   "hidden": true
+  },
+  "ShadingElement6GradientAngle": {
+   "label": "Mapping Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingElement6MappingSize": {
+   "label": "Mapping Size",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement6MappingAspect": {
+   "label": "Mapping Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement6MappingLevel": {
+   "label": "Mapping Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Character"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement6GradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement6GradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement6Red": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6Green": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6Blue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6Alpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6EndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6EndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6EndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement6EndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7Enable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement7Appearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement7Opacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7Thickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7Offset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "ShadingElement7SoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7SoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7BorderLevel": {
+   "label": "Border Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement7BorderExtendX": {
+   "label": "Extend Horizontal",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement7BorderExtendY": {
+   "label": "Extend Vertical",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement7BorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7ColorMode": {
+   "label": "Color Mode",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement7Gradient": {
+   "label": "Shading Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingElement7GradientSeedPending": {
+   "label": "Gradient Seed Pending",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "internal",
+   "default": 1,
+   "hidden": true
+  },
+  "ShadingElement7GradientAngle": {
+   "label": "Mapping Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingElement7MappingSize": {
+   "label": "Mapping Size",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement7MappingAspect": {
+   "label": "Mapping Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement7MappingLevel": {
+   "label": "Mapping Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Character"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement7GradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement7GradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement7Red": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7Green": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7Blue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7Alpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7EndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7EndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7EndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement7EndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8Enable": {
+   "label": "Enabled",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement8Appearance": {
+   "label": "Appearance",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Normal"
+    },
+    {
+     "label": "Outline"
+    },
+    {
+     "label": "Border Fill"
+    },
+    {
+     "label": "Border Stroke"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement8Opacity": {
+   "label": "Opacity",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8Thickness": {
+   "label": "Thickness",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.02,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8Offset": {
+   "label": "Offset",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "ShadingElement8SoftnessX": {
+   "label": "Softness X",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8SoftnessY": {
+   "label": "Softness Y",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8BorderLevel": {
+   "label": "Border Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Letter"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement8BorderExtendX": {
+   "label": "Extend Horizontal",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement8BorderExtendY": {
+   "label": "Extend Vertical",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.25
+   ],
+   "hidden": true
+  },
+  "ShadingElement8BorderRound": {
+   "label": "Round",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8ColorMode": {
+   "label": "Color Mode",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Solid"
+    },
+    {
+     "label": "Gradient"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement8Gradient": {
+   "label": "Shading Gradient",
+   "page": "Shading",
+   "type": "Gradient",
+   "control": "GradientControl",
+   "role": "public",
+   "hidden": true
+  },
+  "ShadingElement8GradientSeedPending": {
+   "label": "Gradient Seed Pending",
+   "page": "Shading",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "internal",
+   "default": 1,
+   "hidden": true
+  },
+  "ShadingElement8GradientAngle": {
+   "label": "Mapping Angle",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -180,
+    180
+   ],
+   "hidden": true
+  },
+  "ShadingElement8MappingSize": {
+   "label": "Mapping Size",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1.5,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement8MappingAspect": {
+   "label": "Mapping Aspect",
+   "page": "Shading",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0.1,
+    4
+   ],
+   "hidden": true
+  },
+  "ShadingElement8MappingLevel": {
+   "label": "Mapping Level",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ComboControl",
+   "role": "public",
+   "default": 0,
+   "options": [
+    {
+     "label": "Character"
+    },
+    {
+     "label": "Word"
+    },
+    {
+     "label": "Line"
+    },
+    {
+     "label": "Text"
+    }
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "ShadingElement8GradientStart": {
+   "label": "Gradient Start",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.25,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement8GradientEnd": {
+   "label": "Gradient End",
+   "page": "Shading",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "internal",
+   "default": [
+    0.75,
+    0.5
+   ],
+   "hidden": true
+  },
+  "ShadingElement8Red": {
+   "label": "Color",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8Green": {
+   "label": "Green",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8Blue": {
+   "label": "Blue",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8Alpha": {
+   "label": "Alpha",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8EndRed": {
+   "label": "Color 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8EndGreen": {
+   "label": "Green 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8EndBlue": {
+   "label": "Blue 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "ShadingElement8EndAlpha": {
+   "label": "Alpha 2",
+   "page": "Shading",
+   "type": "Number",
+   "control": "ColorControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "InFollower": {
+   "label": "Follower (Legacy Hidden)",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "internal",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "InDelay": {
+   "label": "Follower Delay (Legacy Hidden)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "InAnimationStart": {
+   "label": "Animation Start",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InopacityEnable": {
+   "label": "Opacity",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "InopacityFollower": {
+   "label": "Animate",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "InopacityAnimationStart": {
+   "label": "Start Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InopacityAnimationEnd": {
+   "label": "End Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 30,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InopacityLength": {
+   "label": "Duration (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InopacityAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "InopacityDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "InopacityStagger": {
+   "label": "Stagger %",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "InopacityStartValue": {
+   "label": "Start Value",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "InopacityEndValue": {
+   "label": "End Value",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "InopacityCurveMode": {
+   "label": "Curve",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "InopacityCurvePreset": {
+   "label": "Ease",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "InopacityCurvePresetID": {
+   "label": "InopacityCurvePresetID",
+   "page": "In",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "IOpCrv": {
+   "label": "I Opac",
+   "page": "In",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "InopacityCurveResetLatch": {
+   "label": "InopacityCurveResetLatch",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "InblurEnable": {
+   "label": "Blur",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "InblurFollower": {
+   "label": "Animate",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "InblurAnimationStart": {
+   "label": "Start Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InblurAnimationEnd": {
+   "label": "End Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 30,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InblurLength": {
+   "label": "Duration (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InblurAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "InblurDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "InblurStagger": {
+   "label": "Stagger %",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "InblurStartValue": {
+   "label": "Start Value",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.1,
+   "slider": [
+    0,
+    0.2
+   ],
+   "hidden": true
+  },
+  "InblurEndValue": {
+   "label": "End Value",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.2
+   ],
+   "hidden": true
+  },
+  "InblurCurveMode": {
+   "label": "Curve",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "InblurCurvePreset": {
+   "label": "Ease",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "InblurCurvePresetID": {
+   "label": "InblurCurvePresetID",
+   "page": "In",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "IBlrCrv": {
+   "label": "I Blur",
+   "page": "In",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "InblurCurveResetLatch": {
+   "label": "InblurCurveResetLatch",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "IncenterEnable": {
+   "label": "Position",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "IncenterFollower": {
+   "label": "Animate",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "IncenterAnimationStart": {
+   "label": "Start Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "IncenterAnimationEnd": {
+   "label": "End Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 30,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "IncenterLength": {
+   "label": "Duration (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "IncenterAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "IncenterDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "IncenterStagger": {
+   "label": "Stagger %",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "IncenterStartValue": {
+   "label": "Start Value",
+   "page": "In",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "IncenterEndValue": {
+   "label": "End Value",
+   "page": "In",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "IncenterCurveMode": {
+   "label": "Curve",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "IncenterCurvePreset": {
+   "label": "Ease",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "IncenterCurvePresetID": {
+   "label": "IncenterCurvePresetID",
+   "page": "In",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "ICtrCrv": {
+   "label": "I Center",
+   "page": "In",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "IncenterCurveResetLatch": {
+   "label": "IncenterCurveResetLatch",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "InsizeEnable": {
+   "label": "Size",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "InsizeFollower": {
+   "label": "Animate",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "InsizeAnimationStart": {
+   "label": "Start Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InsizeAnimationEnd": {
+   "label": "End Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 30,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InsizeLength": {
+   "label": "Duration (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InsizeAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "InsizeDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "InsizeStagger": {
+   "label": "Stagger %",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "InsizeStartValue": {
+   "label": "Start Value",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    4
+   ],
+   "hidden": true
+  },
+  "InsizeEndValue": {
+   "label": "End Value",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    4
+   ],
+   "hidden": true
+  },
+  "InsizeCurveMode": {
+   "label": "Curve",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "InsizeCurvePreset": {
+   "label": "Ease",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "InsizeCurvePresetID": {
+   "label": "InsizeCurvePresetID",
+   "page": "In",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "ISzCrv": {
+   "label": "I Size",
+   "page": "In",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "InsizeCurveResetLatch": {
+   "label": "InsizeCurveResetLatch",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "IntrackingEnable": {
+   "label": "Tracking",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "IntrackingFollower": {
+   "label": "Animate",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "IntrackingAnimationStart": {
+   "label": "Start Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "IntrackingAnimationEnd": {
+   "label": "End Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 30,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "IntrackingLength": {
+   "label": "Duration (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "IntrackingAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "IntrackingDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "IntrackingStagger": {
+   "label": "Stagger %",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "IntrackingStartValue": {
+   "label": "Start Value",
+   "page": "In",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -0.2,
+    0.5
+   ],
+   "hidden": true
+  },
+  "IntrackingEndValue": {
+   "label": "End Value",
+   "page": "In",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -0.2,
+    0.5
+   ],
+   "hidden": true
+  },
+  "IntrackingPivot": {
+   "label": "Pivot",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "left",
+     "label": "Left"
+    },
+    {
+     "id": "center",
+     "label": "Center"
+    },
+    {
+     "id": "right",
+     "label": "Right"
+    }
+   ],
+   "default": "center",
+   "hidden": true
+  },
+  "IntrackingCurveMode": {
+   "label": "Curve",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "IntrackingCurvePreset": {
+   "label": "Ease",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "IntrackingCurvePresetID": {
+   "label": "IntrackingCurvePresetID",
+   "page": "In",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "ITrkCrv": {
+   "label": "I Track",
+   "page": "In",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "IntrackingCurveResetLatch": {
+   "label": "IntrackingCurveResetLatch",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "InrotationEnable": {
+   "label": "Rotation",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "InrotationFollower": {
+   "label": "Animate",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "InrotationAnimationStart": {
+   "label": "Start Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InrotationAnimationEnd": {
+   "label": "End Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 30,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InrotationLength": {
+   "label": "Duration (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InrotationAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "InrotationDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "InrotationStagger": {
+   "label": "Stagger %",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "InrotationStartValue": {
+   "label": "Start Value",
+   "page": "In",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -720,
+    720
+   ],
+   "hidden": true
+  },
+  "InrotationEndValue": {
+   "label": "End Value",
+   "page": "In",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -720,
+    720
+   ],
+   "hidden": true
+  },
+  "InrotationCurveMode": {
+   "label": "Curve",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "InrotationCurvePreset": {
+   "label": "Ease",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "InrotationCurvePresetID": {
+   "label": "InrotationCurvePresetID",
+   "page": "In",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "IRotCrv": {
+   "label": "I Rot",
+   "page": "In",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "InrotationCurveResetLatch": {
+   "label": "InrotationCurveResetLatch",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "InexplosionEnable": {
+   "label": "Explosion",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "InexplosionFollower": {
+   "label": "Animate",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "InexplosionAnimationStart": {
+   "label": "Start Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InexplosionAnimationEnd": {
+   "label": "End Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 30,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InexplosionLength": {
+   "label": "Duration (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InexplosionAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "InexplosionDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "InexplosionStagger": {
+   "label": "Stagger %",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "InexplosionStartValue": {
+   "label": "Start Value",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1.5
+   ],
+   "hidden": true
+  },
+  "InexplosionEndValue": {
+   "label": "End Value",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1.5
+   ],
+   "hidden": true
+  },
+  "InexplosionDamping": {
+   "label": "Damping",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 2,
+   "slider": [
+    0,
+    8
+   ],
+   "hidden": true
+  },
+  "InexplosionSpeed": {
+   "label": "Variance",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.35,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "InexplosionRotationX": {
+   "label": "Spin X",
+   "page": "In",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 180,
+   "slider": [
+    0,
+    720
+   ],
+   "hidden": true
+  },
+  "InexplosionRotationY": {
+   "label": "Spin Y",
+   "page": "In",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 180,
+   "slider": [
+    0,
+    720
+   ],
+   "hidden": true
+  },
+  "InexplosionRotation": {
+   "label": "Spin Z",
+   "page": "In",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 240,
+   "slider": [
+    0,
+    1440
+   ],
+   "hidden": true
+  },
+  "InexplosionOffset": {
+   "label": "Pre-Roll",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InexplosionReverse": {
+   "label": "Reverse",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "InexplosionCurveMode": {
+   "label": "Curve",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "InexplosionCurvePreset": {
+   "label": "Ease",
+   "page": "In",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "InexplosionCurvePresetID": {
+   "label": "InexplosionCurvePresetID",
+   "page": "In",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "IExpCrv": {
+   "label": "I Expl",
+   "page": "In",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "InexplosionCurveResetLatch": {
+   "label": "InexplosionCurveResetLatch",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "OutFollower": {
+   "label": "Follower (Legacy Hidden)",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "internal",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "OutDelay": {
+   "label": "Follower Delay (Legacy Hidden)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "OutStartMode": {
+   "label": "Align (Legacy)",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "internal",
+   "options": [
+    {
+     "id": "before_end",
+     "label": "End"
+    },
+    {
+     "id": "frame_number",
+     "label": "Frame"
+    }
+   ],
+   "default": "before_end",
+   "hidden": true
+  },
+  "OutAnimationStart": {
+   "label": "Animation Start",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutopacityEnable": {
+   "label": "Opacity",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OutopacityFollower": {
+   "label": "Animate",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "OutopacityAnimationStart": {
+   "label": "Start Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 100,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutopacityAnimationEnd": {
+   "label": "End Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 130,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutopacityBeforeEnd": {
+   "label": "Before End (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "min": 0,
+   "slider": [
+    0,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutopacityLength": {
+   "label": "Duration (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutopacityAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "OutopacityDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "OutopacityStagger": {
+   "label": "Stagger %",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "OutopacityStartValue": {
+   "label": "Start Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "OutopacityEndValue": {
+   "label": "End Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "OutopacityCurveMode": {
+   "label": "Curve",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "OutopacityCurvePreset": {
+   "label": "Ease",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "OutopacityCurvePresetID": {
+   "label": "OutopacityCurvePresetID",
+   "page": "Out",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "OOpCrv": {
+   "label": "O Opac",
+   "page": "Out",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "OutopacityCurveResetLatch": {
+   "label": "OutopacityCurveResetLatch",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "OutblurEnable": {
+   "label": "Blur",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OutblurFollower": {
+   "label": "Animate",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "OutblurAnimationStart": {
+   "label": "Start Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 100,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutblurAnimationEnd": {
+   "label": "End Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 130,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutblurBeforeEnd": {
+   "label": "Before End (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "min": 0,
+   "slider": [
+    0,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutblurLength": {
+   "label": "Duration (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutblurAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "OutblurDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "OutblurStagger": {
+   "label": "Stagger %",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "OutblurStartValue": {
+   "label": "Start Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    0.2
+   ],
+   "hidden": true
+  },
+  "OutblurEndValue": {
+   "label": "End Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.1,
+   "slider": [
+    0,
+    0.2
+   ],
+   "hidden": true
+  },
+  "OutblurCurveMode": {
+   "label": "Curve",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "OutblurCurvePreset": {
+   "label": "Ease",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "OutblurCurvePresetID": {
+   "label": "OutblurCurvePresetID",
+   "page": "Out",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "OBlrCrv": {
+   "label": "O Blur",
+   "page": "Out",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "OutblurCurveResetLatch": {
+   "label": "OutblurCurveResetLatch",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "OutcenterEnable": {
+   "label": "Position",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OutcenterFollower": {
+   "label": "Animate",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "OutcenterAnimationStart": {
+   "label": "Start Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 100,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutcenterAnimationEnd": {
+   "label": "End Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 130,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutcenterBeforeEnd": {
+   "label": "Before End (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "min": 0,
+   "slider": [
+    0,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutcenterLength": {
+   "label": "Duration (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutcenterAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "OutcenterDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "OutcenterStagger": {
+   "label": "Stagger %",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "OutcenterStartValue": {
+   "label": "Start Value",
+   "page": "Out",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "OutcenterEndValue": {
+   "label": "End Value",
+   "page": "Out",
+   "type": "Point",
+   "control": "OffsetControl",
+   "role": "public",
+   "default": [
+    0,
+    0
+   ],
+   "hidden": true
+  },
+  "OutcenterCurveMode": {
+   "label": "Curve",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "OutcenterCurvePreset": {
+   "label": "Ease",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "OutcenterCurvePresetID": {
+   "label": "OutcenterCurvePresetID",
+   "page": "Out",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "OCtrCrv": {
+   "label": "O Center",
+   "page": "Out",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "OutcenterCurveResetLatch": {
+   "label": "OutcenterCurveResetLatch",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "OutsizeEnable": {
+   "label": "Size",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OutsizeFollower": {
+   "label": "Animate",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "OutsizeAnimationStart": {
+   "label": "Start Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 100,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutsizeAnimationEnd": {
+   "label": "End Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 130,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutsizeBeforeEnd": {
+   "label": "Before End (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "min": 0,
+   "slider": [
+    0,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutsizeLength": {
+   "label": "Duration (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutsizeAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "OutsizeDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "OutsizeStagger": {
+   "label": "Stagger %",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "OutsizeStartValue": {
+   "label": "Start Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    4
+   ],
+   "hidden": true
+  },
+  "OutsizeEndValue": {
+   "label": "End Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    4
+   ],
+   "hidden": true
+  },
+  "OutsizeCurveMode": {
+   "label": "Curve",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "OutsizeCurvePreset": {
+   "label": "Ease",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "OutsizeCurvePresetID": {
+   "label": "OutsizeCurvePresetID",
+   "page": "Out",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "OSzCrv": {
+   "label": "O Size",
+   "page": "Out",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "OutsizeCurveResetLatch": {
+   "label": "OutsizeCurveResetLatch",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "OuttrackingEnable": {
+   "label": "Tracking",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OuttrackingFollower": {
+   "label": "Animate",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "OuttrackingAnimationStart": {
+   "label": "Start Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 100,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OuttrackingAnimationEnd": {
+   "label": "End Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 130,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OuttrackingBeforeEnd": {
+   "label": "Before End (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "min": 0,
+   "slider": [
+    0,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OuttrackingLength": {
+   "label": "Duration (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OuttrackingAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "OuttrackingDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "OuttrackingStagger": {
+   "label": "Stagger %",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "OuttrackingStartValue": {
+   "label": "Start Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -0.2,
+    0.5
+   ],
+   "hidden": true
+  },
+  "OuttrackingEndValue": {
+   "label": "End Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -0.2,
+    0.5
+   ],
+   "hidden": true
+  },
+  "OuttrackingPivot": {
+   "label": "Pivot",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "left",
+     "label": "Left"
+    },
+    {
+     "id": "center",
+     "label": "Center"
+    },
+    {
+     "id": "right",
+     "label": "Right"
+    }
+   ],
+   "default": "center",
+   "hidden": true
+  },
+  "OuttrackingCurveMode": {
+   "label": "Curve",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "OuttrackingCurvePreset": {
+   "label": "Ease",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "OuttrackingCurvePresetID": {
+   "label": "OuttrackingCurvePresetID",
+   "page": "Out",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "OTrkCrv": {
+   "label": "O Track",
+   "page": "Out",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "OuttrackingCurveResetLatch": {
+   "label": "OuttrackingCurveResetLatch",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "OutrotationEnable": {
+   "label": "Rotation",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OutrotationFollower": {
+   "label": "Animate",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "OutrotationAnimationStart": {
+   "label": "Start Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 100,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutrotationAnimationEnd": {
+   "label": "End Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 130,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutrotationBeforeEnd": {
+   "label": "Before End (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "min": 0,
+   "slider": [
+    0,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutrotationLength": {
+   "label": "Duration (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutrotationAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "OutrotationDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "OutrotationStagger": {
+   "label": "Stagger %",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "OutrotationStartValue": {
+   "label": "Start Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -720,
+    720
+   ],
+   "hidden": true
+  },
+  "OutrotationEndValue": {
+   "label": "End Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -720,
+    720
+   ],
+   "hidden": true
+  },
+  "OutrotationCurveMode": {
+   "label": "Curve",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "OutrotationCurvePreset": {
+   "label": "Ease",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "OutrotationCurvePresetID": {
+   "label": "OutrotationCurvePresetID",
+   "page": "Out",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "ORotCrv": {
+   "label": "O Rot",
+   "page": "Out",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "OutrotationCurveResetLatch": {
+   "label": "OutrotationCurveResetLatch",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "OutexplosionEnable": {
+   "label": "Explosion",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OutexplosionFollower": {
+   "label": "Animate",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "letters",
+     "label": "Letters"
+    },
+    {
+     "id": "words",
+     "label": "Words"
+    },
+    {
+     "id": "lines",
+     "label": "Lines"
+    }
+   ],
+   "default": "letters",
+   "hidden": true
+  },
+  "OutexplosionAnimationStart": {
+   "label": "Start Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 100,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutexplosionAnimationEnd": {
+   "label": "End Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 130,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutexplosionBeforeEnd": {
+   "label": "Before End (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "min": 0,
+   "slider": [
+    0,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutexplosionLength": {
+   "label": "Duration (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 20,
+   "min": 1,
+   "slider": [
+    1,
+    120
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutexplosionAnimationSpeed": {
+   "label": "Speed (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0.01,
+   "max": 100,
+   "slider": [
+    0.25,
+    4
+   ],
+   "hidden": true
+  },
+  "OutexplosionDuration": {
+   "label": "Stagger Frames (Legacy)",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 1,
+   "min": 0,
+   "slider": [
+    0,
+    24
+   ],
+   "hidden": true
+  },
+  "OutexplosionStagger": {
+   "label": "Stagger %",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "min": 0,
+   "slider": [
+    0,
+    100
+   ],
+   "hidden": true
+  },
+  "OutexplosionStartValue": {
+   "label": "Start Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    1.5
+   ],
+   "hidden": true
+  },
+  "OutexplosionEndValue": {
+   "label": "End Value",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "slider": [
+    0,
+    1.5
+   ],
+   "hidden": true
+  },
+  "OutexplosionDamping": {
+   "label": "Damping",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 2,
+   "slider": [
+    0,
+    8
+   ],
+   "hidden": true
+  },
+  "OutexplosionSpeed": {
+   "label": "Variance",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0.35,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "OutexplosionRotationX": {
+   "label": "Spin X",
+   "page": "Out",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 180,
+   "slider": [
+    0,
+    720
+   ],
+   "hidden": true
+  },
+  "OutexplosionRotationY": {
+   "label": "Spin Y",
+   "page": "Out",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 180,
+   "slider": [
+    0,
+    720
+   ],
+   "hidden": true
+  },
+  "OutexplosionRotation": {
+   "label": "Spin Z",
+   "page": "Out",
+   "type": "Number",
+   "control": "ScrewControl",
+   "role": "public",
+   "default": 240,
+   "slider": [
+    0,
+    1440
+   ],
+   "hidden": true
+  },
+  "OutexplosionOffset": {
+   "label": "Pre-Roll",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutexplosionReverse": {
+   "label": "Reverse",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true,
+   "hidden": true
+  },
+  "OutexplosionCurveMode": {
+   "label": "Curve",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "preset",
+     "label": "Preset"
+    },
+    {
+     "id": "custom",
+     "label": "Custom"
+    }
+   ],
+   "default": "preset",
+   "hidden": true
+  },
+  "OutexplosionCurvePreset": {
+   "label": "Ease",
+   "page": "Out",
+   "type": "FuID",
+   "control": "ComboIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "linear",
+     "label": "Linear"
+    },
+    {
+     "id": "in_quad",
+     "label": "In Quad"
+    },
+    {
+     "id": "out_quad",
+     "label": "Out Quad"
+    },
+    {
+     "id": "in_out_quad",
+     "label": "In Out Quad"
+    },
+    {
+     "id": "in_cubic",
+     "label": "In Cubic"
+    },
+    {
+     "id": "out_cubic",
+     "label": "Out Cubic"
+    },
+    {
+     "id": "in_out_cubic",
+     "label": "In Out Cubic"
+    },
+    {
+     "id": "in_quart",
+     "label": "In Quart"
+    },
+    {
+     "id": "out_quart",
+     "label": "Out Quart"
+    },
+    {
+     "id": "in_out_quart",
+     "label": "In Out Quart"
+    },
+    {
+     "id": "in_quint",
+     "label": "In Quint"
+    },
+    {
+     "id": "out_quint",
+     "label": "Out Quint"
+    },
+    {
+     "id": "in_out_quint",
+     "label": "In Out Quint"
+    },
+    {
+     "id": "in_sine",
+     "label": "In Sine"
+    },
+    {
+     "id": "out_sine",
+     "label": "Out Sine"
+    },
+    {
+     "id": "in_out_sine",
+     "label": "In Out Sine"
+    },
+    {
+     "id": "in_expo",
+     "label": "In Expo"
+    },
+    {
+     "id": "out_expo",
+     "label": "Out Expo"
+    },
+    {
+     "id": "in_out_expo",
+     "label": "In Out Expo"
+    },
+    {
+     "id": "in_circ",
+     "label": "In Circ"
+    },
+    {
+     "id": "out_circ",
+     "label": "Out Circ"
+    },
+    {
+     "id": "in_out_circ",
+     "label": "In Out Circ"
+    },
+    {
+     "id": "in_back",
+     "label": "In Back"
+    },
+    {
+     "id": "out_back",
+     "label": "Out Back"
+    },
+    {
+     "id": "in_out_back",
+     "label": "In Out Back"
+    },
+    {
+     "id": "in_elastic",
+     "label": "In Elastic"
+    },
+    {
+     "id": "out_elastic",
+     "label": "Out Elastic"
+    },
+    {
+     "id": "in_out_elastic",
+     "label": "In Out Elastic"
+    },
+    {
+     "id": "in_bounce",
+     "label": "In Bounce"
+    },
+    {
+     "id": "out_bounce",
+     "label": "Out Bounce"
+    },
+    {
+     "id": "in_out_bounce",
+     "label": "In Out Bounce"
+    }
+   ],
+   "default": "linear",
+   "hidden": true
+  },
+  "OutexplosionCurvePresetID": {
+   "label": "OutexplosionCurvePresetID",
+   "page": "Out",
+   "type": "Text",
+   "control": "TextEditControl",
+   "role": "public",
+   "default": "",
+   "hidden": true
+  },
+  "OExpCrv": {
+   "label": "O Expl",
+   "page": "Out",
+   "type": "LookUpTable",
+   "control": "SplineControl",
+   "role": "internal",
+   "hidden": true
+  },
+  "OutexplosionCurveResetLatch": {
+   "label": "OutexplosionCurveResetLatch",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "internal",
+   "default": 0,
+   "hidden": true
+  },
+  "MotionBlurEnable": {
+   "label": "Motion Blur",
+   "page": "Motion Blur",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "MotionBlurShutterAngle": {
+   "label": "Shutter",
+   "page": "Motion Blur",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 180,
+   "slider": [
+    0,
+    720
+   ],
+   "hidden": true
+  },
+  "MotionBlurSamples": {
+   "label": "Quality",
+   "page": "Motion Blur",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 2,
+   "min": 1,
+   "max": 10,
+   "slider": [
+    1,
+    10
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "MotionBlurBias": {
+   "label": "Bias",
+   "page": "Motion Blur",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "slider": [
+    -1,
+    1
+   ],
+   "hidden": true
+  },
+  "MotionBlurSampleSpread": {
+   "label": "Spread",
+   "page": "Motion Blur",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 1,
+   "min": 0,
+   "max": 1,
+   "slider": [
+    0,
+    1
+   ],
+   "hidden": true
+  },
+  "Width": {
+   "label": "Width",
+   "page": "Image",
+   "type": "Number",
+   "role": "fusion"
+  },
+  "Height": {
+   "label": "Height",
+   "page": "Image",
+   "type": "Number",
+   "role": "fusion"
+  },
+  "UseFrameFormatSettings": {
+   "label": "UseFrameFormatSettings",
+   "page": "Image",
+   "type": "Number",
+   "role": "fusion"
+  },
+  "PixelAspect": {
+   "label": "PixelAspect",
+   "page": "Image",
+   "type": "Point",
+   "role": "fusion"
+  },
+  "Depth": {
+   "label": "Depth",
+   "page": "Image",
+   "type": "Number",
+   "role": "fusion"
+  },
+  "GlobalIn": {
+   "label": "GlobalIn",
+   "page": "Image",
+   "type": "Number",
+   "role": "fusion"
+  },
+  "GlobalOut": {
+   "label": "GlobalOut",
+   "page": "Image",
+   "type": "Number",
+   "role": "fusion"
+  },
+  "Comments": {
+   "label": "Comments",
+   "page": "Image",
+   "type": "Text",
+   "role": "fusion"
+  },
+  "FrameRenderScript": {
+   "label": "FrameRenderScript",
+   "page": "Image",
+   "type": "Text",
+   "role": "fusion"
+  },
+  "StartRenderScript": {
+   "label": "StartRenderScript",
+   "page": "Image",
+   "type": "Text",
+   "role": "fusion"
+  },
+  "EndRenderScript": {
+   "label": "EndRenderScript",
+   "page": "Image",
+   "type": "Text",
+   "role": "fusion"
+  }
+ }
+}

@@ -1,0 +1,176 @@
+{
+  "name": "Textizo - Party Pop",
+  "text": "TEXTIZO!",
+  "font": "Arial Black",
+  "style": "Regular",
+  "size": 2.4,
+  "center": [
+    0.5,
+    0.5
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "letters",
+      "start": 0,
+      "span": 4.0,
+      "delay": 2.0,
+      "from": 0,
+      "to": 1,
+      "ease": "out_quad"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 0,
+      "span": 6.042,
+      "delay": 1.994,
+      "from": 0.12,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "position": {
+      "by": "letters",
+      "start": 0,
+      "span": 8.0,
+      "delay": 2.0,
+      "from": [
+        0.0,
+        -0.12
+      ],
+      "to": [
+        0.0,
+        0.0
+      ],
+      "ease": "out_back"
+    },
+    "size": {
+      "by": "letters",
+      "start": 0,
+      "span": 11.872,
+      "delay": 2.018,
+      "from": 0,
+      "to": 1,
+      "ease": "out_elastic"
+    },
+    "tracking": {
+      "by": "letters",
+      "start": 0,
+      "span": 18.0,
+      "delay": 0.0,
+      "from": 0.05,
+      "to": 0,
+      "ease": "out_back"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 0,
+      "span": 8.0,
+      "delay": 2.0,
+      "from": -120,
+      "to": 0,
+      "ease": "out_back"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "letters",
+      "start": 100,
+      "span": 4.839,
+      "delay": 1.452,
+      "to": 0,
+      "ease": "in_cubic"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 100,
+      "span": 5.818,
+      "delay": 1.455,
+      "to": 0.1,
+      "ease": "in_quad"
+    },
+    "position": {
+      "by": "letters",
+      "start": 100,
+      "span": 5.818,
+      "delay": 1.455,
+      "to": [
+        0.0,
+        0.1
+      ],
+      "ease": "in_back"
+    },
+    "size": {
+      "by": "letters",
+      "start": 100,
+      "span": 5.818,
+      "delay": 1.455,
+      "to": 0,
+      "ease": "in_back"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 100,
+      "span": 5.818,
+      "delay": 1.455,
+      "to": 180,
+      "ease": "in_back"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        0.75,
+        1,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "2": {
+      "appearance": "outline",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.009,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 0.85,
+      "thickness": 0.02,
+      "offset": [
+        0.006,
+        -0.012
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": {
+    "shutter": 180,
+    "quality": 2,
+    "bias": 0,
+    "spread": 1
+  }
+}

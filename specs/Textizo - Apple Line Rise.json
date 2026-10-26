@@ -1,0 +1,98 @@
+{
+  "name": "Textizo - Apple Line Rise",
+  "text": "Simply\nbeautiful.",
+  "font": "Arial",
+  "style": "Bold",
+  "size": 2,
+  "center": [
+    0.5,
+    0.56
+  ],
+  "align": "center",
+  "tracking": -0.003,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "lines",
+      "start": 0,
+      "span": 21.429,
+      "delay": 8.571,
+      "from": 0,
+      "to": 1,
+      "ease": "in_out_sine"
+    },
+    "blur": {
+      "by": "lines",
+      "start": 0,
+      "span": 24.286,
+      "delay": 9.714,
+      "from": 0.12,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "position": {
+      "by": "lines",
+      "start": 0,
+      "span": 24.286,
+      "delay": 9.714,
+      "from": [
+        0.0,
+        -0.05
+      ],
+      "to": [
+        0.0,
+        0.0
+      ],
+      "ease": "out_quart"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "lines",
+      "start": 100,
+      "span": 9.231,
+      "delay": 2.769,
+      "to": 0,
+      "ease": "in_out_sine"
+    },
+    "blur": {
+      "by": "lines",
+      "start": 100,
+      "span": 9.231,
+      "delay": 2.769,
+      "to": 0.12,
+      "ease": "in_quad"
+    },
+    "position": {
+      "by": "lines",
+      "start": 100,
+      "span": 9.231,
+      "delay": 2.769,
+      "to": [
+        0.0,
+        0.035
+      ],
+      "ease": "in_quart"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": false
+}

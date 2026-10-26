@@ -1,0 +1,150 @@
+{
+  "name": "Textizo - Bounce Drop",
+  "text": "BOUNCE!",
+  "font": "Arial Black",
+  "style": "Regular",
+  "size": 2.4,
+  "center": [
+    0.5,
+    0.5
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "letters",
+      "start": 0,
+      "span": 4.0,
+      "delay": 2.0,
+      "from": 0,
+      "to": 1,
+      "ease": "out_quad"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 0,
+      "span": 6.004,
+      "delay": 1.999,
+      "from": 0.1,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "position": {
+      "by": "letters",
+      "start": 0,
+      "span": 11.988,
+      "delay": 2.002,
+      "from": [
+        0.0,
+        0.45
+      ],
+      "to": [
+        0.0,
+        0.0
+      ],
+      "ease": "out_bounce"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 0,
+      "span": 13.994,
+      "delay": 2.001,
+      "from": -25,
+      "to": 0,
+      "ease": "out_elastic"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "letters",
+      "start": 100,
+      "span": 7.005,
+      "delay": 1.499,
+      "to": 0,
+      "ease": "in_cubic"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 100,
+      "span": 7.005,
+      "delay": 1.499,
+      "to": 0.08,
+      "ease": "in_quad"
+    },
+    "position": {
+      "by": "letters",
+      "start": 100,
+      "span": 7.005,
+      "delay": 1.499,
+      "to": [
+        0.0,
+        0.7
+      ],
+      "ease": "in_back"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 100,
+      "span": 7.005,
+      "delay": 1.499,
+      "to": 120,
+      "ease": "in_back"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        1,
+        0.2,
+        0.55
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "2": {
+      "appearance": "outline",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.009,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 0.85,
+      "thickness": 0.02,
+      "offset": [
+        0.006,
+        -0.012
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": {
+    "shutter": 180,
+    "quality": 2,
+    "bias": 0,
+    "spread": 1
+  }
+}

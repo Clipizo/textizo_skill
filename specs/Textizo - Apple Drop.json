@@ -1,0 +1,98 @@
+{
+  "name": "Textizo - Apple Drop",
+  "text": "Textizo",
+  "font": "Arial",
+  "style": "Bold",
+  "size": 2.4,
+  "center": [
+    0.5,
+    0.5
+  ],
+  "align": "center",
+  "tracking": -0.003,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "letters",
+      "start": 0,
+      "span": 10.0,
+      "delay": 2.0,
+      "from": 0,
+      "to": 1,
+      "ease": "in_out_sine"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 0,
+      "span": 13.684,
+      "delay": 2.053,
+      "from": 0.1,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "position": {
+      "by": "letters",
+      "start": 0,
+      "span": 13.684,
+      "delay": 2.053,
+      "from": [
+        0.0,
+        0.06
+      ],
+      "to": [
+        0.0,
+        0.0
+      ],
+      "ease": "out_quart"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "letters",
+      "start": 100,
+      "span": 4.8,
+      "delay": 1.2,
+      "to": 0,
+      "ease": "in_out_sine"
+    },
+    "blur": {
+      "by": "letters",
+      "start": 100,
+      "span": 4.8,
+      "delay": 1.2,
+      "to": 0.1,
+      "ease": "in_quad"
+    },
+    "position": {
+      "by": "letters",
+      "start": 100,
+      "span": 4.8,
+      "delay": 1.2,
+      "to": [
+        0.0,
+        -0.04
+      ],
+      "ease": "in_quart"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": false
+}

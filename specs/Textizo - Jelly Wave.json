@@ -1,0 +1,142 @@
+{
+  "name": "Textizo - Jelly Wave",
+  "text": "JELLY!",
+  "font": "Arial Black",
+  "style": "Regular",
+  "size": 2.6,
+  "center": [
+    0.5,
+    0.5
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "letters",
+      "start": 0,
+      "span": 4.0,
+      "delay": 2.0,
+      "from": 0,
+      "to": 1,
+      "ease": "out_quad"
+    },
+    "position": {
+      "by": "letters",
+      "start": 0,
+      "span": 16.0,
+      "delay": 2.0,
+      "from": [
+        0.0,
+        -0.22
+      ],
+      "to": [
+        0.0,
+        0.0
+      ],
+      "ease": "out_elastic"
+    },
+    "size": {
+      "by": "letters",
+      "start": 0,
+      "span": 16.0,
+      "delay": 2.0,
+      "from": 0.3,
+      "to": 1,
+      "ease": "out_elastic"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 0,
+      "span": 16.0,
+      "delay": 2.0,
+      "from": 20,
+      "to": 0,
+      "ease": "out_elastic"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "letters",
+      "start": 100,
+      "span": 10.286,
+      "delay": 1.543,
+      "to": 0,
+      "ease": "in_cubic"
+    },
+    "position": {
+      "by": "letters",
+      "start": 100,
+      "span": 10.286,
+      "delay": 1.543,
+      "to": [
+        0.0,
+        -0.7
+      ],
+      "ease": "in_quad"
+    },
+    "rotation": {
+      "by": "letters",
+      "start": 100,
+      "span": 10.286,
+      "delay": 1.543,
+      "to": -60,
+      "ease": "in_quad"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        0.15,
+        0.88,
+        1
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "2": {
+      "appearance": "outline",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.0097,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 0.85,
+      "thickness": 0.02,
+      "offset": [
+        0.0065,
+        -0.013
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": {
+    "shutter": 180,
+    "quality": 2,
+    "bias": 0,
+    "spread": 1
+  }
+}

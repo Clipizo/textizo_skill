@@ -1,0 +1,124 @@
+{
+  "name": "Textizo-03A",
+  "text": "BIG NEWS TODAY",
+  "font": "Impact",
+  "style": "Regular",
+  "size": 1.69,
+  "center": [
+    0.5,
+    0.4312
+  ],
+  "align": "center",
+  "tracking": 0,
+  "line_spacing": 1,
+  "rotation": 0,
+  "alpha": 1,
+  "in": {
+    "opacity": {
+      "by": "words",
+      "start": 0,
+      "span": 2.0,
+      "delay": 6.0,
+      "from": 0,
+      "to": 1,
+      "ease": "out_quad"
+    },
+    "blur": {
+      "by": "words",
+      "start": 0,
+      "span": 6.0,
+      "delay": 6.0,
+      "from": 0.2,
+      "to": 0,
+      "ease": "out_cubic"
+    },
+    "size": {
+      "by": "words",
+      "start": 0,
+      "span": 8.0,
+      "delay": 6.0,
+      "from": 4,
+      "to": 1,
+      "ease": "out_back"
+    }
+  },
+  "out": {
+    "opacity": {
+      "by": "words",
+      "start": 101,
+      "span": 6.997,
+      "delay": 3.002,
+      "to": 0,
+      "ease": "in_quad"
+    },
+    "blur": {
+      "by": "words",
+      "start": 101,
+      "span": 6.997,
+      "delay": 3.002,
+      "to": 0.2,
+      "ease": "in_quad"
+    },
+    "size": {
+      "by": "words",
+      "start": 101,
+      "span": 6.997,
+      "delay": 3.002,
+      "to": 3.5,
+      "ease": "in_cubic"
+    }
+  },
+  "elements": {
+    "1": {
+      "appearance": "normal",
+      "color": [
+        1,
+        1,
+        1
+      ],
+      "opacity": 1,
+      "thickness": 0.02,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "2": {
+      "appearance": "outline",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 1,
+      "thickness": 0.0063,
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "softness": 0
+    },
+    "3": {
+      "appearance": "normal",
+      "color": [
+        0,
+        0,
+        0
+      ],
+      "opacity": 0.85,
+      "thickness": 0.02,
+      "offset": [
+        0.0042,
+        -0.0084
+      ],
+      "softness": 0
+    }
+  },
+  "motion_blur": {
+    "shutter": 180,
+    "quality": 2,
+    "bias": 0,
+    "spread": 1
+  }
+}

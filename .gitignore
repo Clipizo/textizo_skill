@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# Your own presets stay out of the kit
+my-presets/*
+!my-presets/README.md
