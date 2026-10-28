@@ -1,0 +1,20 @@
+Clipizo product license
+
+This product is made by Clipizo (https://clipizo.com). It is free of charge, but it is licensed to you, not sold.
+You may install and use it in your own projects, personal or commercial, including client work and published or
+monetized videos.
+
+NO REDISTRIBUTION. You may not share, re-upload, redistribute, resell, rent or sublicense its files, on their own
+or as part of another pack, product or download, whether modified or not. Being free of charge does not make it
+free to redistribute. To recommend it, link to its page on clipizo.com.
+
+NO REVERSE ENGINEERING. You may not reverse engineer, decompile, disassemble, decrypt or unpack it, try to extract
+its source code, protected modules or assets, or reuse its code in another product.
+
+LICENSE KEYS. If this product uses a license key or activation, the key is personal to you. Do not share it, and do
+not remove, disable or work around its license check, activation or copy protection.
+
+Activities permitted by mandatory law, including applicable software interoperability rights, are not prohibited.
+
+Full terms: https://clipizo.com/terms#license
+Copyright (c) 2026 Clipizo. All rights reserved.

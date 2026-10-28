@@ -54,3 +54,7 @@ Resolve's Settings folder is in these places:
 - **As a new node:** paste the code into the Nodes area, or drag the `.setting` file onto it.
 - **On an existing Textizo node:** right-click the node and choose **Settings > Load…**.
 - **Your own text:** type it in the Inspector afterwards. The animation adapts to any length of text.
+
+## License
+
+Free of charge, under the Clipizo product license in `LICENSE.txt`. Use the kit and its presets in your own projects, personal or commercial, including client work and monetized videos. Please don't re-upload or redistribute the files; to recommend Textizo, link to its page on clipizo.com.
