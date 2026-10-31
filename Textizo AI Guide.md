@@ -147,6 +147,18 @@ So always write every row's `Enable`, every element's `Enable`, and the full set
 - If the user names another font, use it, and tell them it must be installed on every computer that opens the project.
 - Bold looks: `"Arial"` + `"Bold"`, or `"Arial Black"` + `"Regular"`.
 
+**Other languages.** Write Arabic, Persian, Urdu, Hebrew, Chinese, Japanese or Korean text straight into `StyledText`, as the characters themselves, for example `StyledText = Input { Value = "مرحبا بالعالم", },`. Textizo handles the rest:
+
+- Arabic letters join (each takes its connected form, and lam + alef becomes one letter).
+- Arabic and Hebrew read right to left, while Latin words and numbers inside them stay left to right.
+- Vowel and accent marks stay on their letter.
+- Each Chinese or Japanese character is a word of its own, since those languages use no spaces.
+- If the chosen font has no letters for the language, Textizo draws those characters with an installed font that has them:
+  - Windows: Segoe UI or Tahoma for Arabic and Hebrew, Microsoft YaHei for Chinese, Yu Gothic for Japanese, Malgun Gothic for Korean.
+  - Mac: Geeza Pro, Arial Hebrew, PingFang SC, Hiragino Sans, Apple SD Gothic Neo.
+
+  For a look that matches the rest of the title, pick a font that has the language: `"Arial"` or `"Tahoma"` for Arabic and Hebrew, `"Microsoft YaHei"` (Windows) or `"PingFang SC"` (Mac) for Chinese, `"Yu Gothic"` (Windows) or `"Hiragino Sans"` (Mac) for Japanese. Arial Black, Impact and Comic Sans MS have only Latin letters.
+
 ## 4. Animation rows
 
 Each row's ID is the page, then the row, then the field. For example, `In` + `opacity` + `Enable` gives `InopacityEnable`.
@@ -201,6 +213,14 @@ Do **not** write `...StartValue` on Out rows. Textizo ignores it.
 
 For example, `IntrackingPivot = Input { Value = FuID { "left" }, },`. Leave it out for Center. Lines rows don't spread sideways, so Pivot changes nothing there.
 
+**Page extra: Direction.** Each page (`InDirection`, `OutDirection`) sets the order the pieces go in:
+
+- `FuID { "reading" }`: the text's own reading order (the default). That is left to right for English and right to left for Arabic and Hebrew.
+- `FuID { "ltr" }`: left to right across the screen.
+- `FuID { "rtl" }`: right to left across the screen, line by line.
+
+Lines always go top to bottom. For example, `InDirection = Input { Value = FuID { "rtl" }, },` makes the letters arrive from the right. Leave it out for Reading Order.
+
 **Explosion extras.** An Explosion row that is on also needs these 7 fields:
 
 | Field | Inspector | Use |
@@ -235,7 +255,7 @@ A complete Explosion row (this one is an entrance: 7 letters fly in, each for 14
 
 An Out Explosion row uses the same 17 inputs with `Out` instead of `In` (`OutexplosionEnable`, `OutexplosionDamping`, `OutexplosionSpeed`, …), minus `OutexplosionStartValue`.
 
-**Never write any other row input** (apart from a Tracking row's `Pivot`). The hidden legacy inputs and the curve inputs are not needed.
+**Never write any other row input** (apart from a Tracking row's `Pivot`). The hidden legacy inputs and the curve inputs are not needed. The only page inputs are `InDirection`, `OutDirection` and Sync to Speech's `InSyncEnable` and `InSyncWords` (section 5).
 
 ## 5. Timing
 
@@ -257,9 +277,11 @@ Stagger % = 100 x D / S                        (use 0 when N is 1)
 
 **Counting N:**
 
-- **letters:** every character except spaces, tabs and line breaks. Punctuation counts.
-- **words:** pieces separated by spaces.
+- **letters:** every character except spaces, tabs and line breaks. Punctuation counts. Accent and vowel marks don't (they belong to their letter), and an Arabic lam + alef counts as one letter.
+- **words:** pieces separated by spaces. Each Chinese or Japanese character is a word.
 - **lines:** lines that are not empty.
+
+The pieces go in the page's Direction (section 4): reading order unless you set another.
 
 **Example.** For "HELLO" (N = 5) with each letter moving 8 frames, 2 frames apart: End Frame = 0 + 8 + 2 x 4 = 16, and Stagger % = 25.
 
@@ -278,6 +300,37 @@ Out Start Frame = Out End Frame - (S + D x (N - 1))
 For example, a 5-second clip at 24 fps has frames 0 to 119, so the exit starts around 100 and ends around 112 to 116. If the user changes the clip length later, they move every Out row's Start and End Frame by the same amount.
 
 All rows of one page usually start on the same frame. Give rows slightly different S values to layer them, for example opacity 10 frames, blur 14 and position 14.
+
+**Sync to Speech** times the entrance to a voice instead of to frames. `InSyncEnable = Input { Value = 1, },` turns it on. Then the Words Shown slider (`InSyncWords`, whole numbers) says how many words are on screen; the user keys it in the Inspector: 1 on the frame the first word is spoken, 2 on the second word, and so on.
+
+- Each word appears on its key and plays the In rows from there. A row's Start Frame to End Frame is how long one word's animation takes, and rows keep their offsets from each other.
+- With Letters, the letters of a word stagger within the word (Stagger %).
+- Words not shown yet are invisible. A jump of more than one between two keys spreads those words evenly.
+- The Out page still works by frames.
+
+Presets usually leave Sync off, because the timing belongs to one video. If the user gives you word times (for example a transcript with timestamps), you can key Words Shown in the file: a spline with one key per word, at seconds x fps from the clip start, connected to `InSyncWords`.
+
+```
+{
+    Tools = ordered() {
+        Textizo1SyncWords = BezierSpline {
+            SplineColor = { Red = 211, Green = 255, Blue = 24 },
+            KeyFrames = {
+                [0] = { 0, Flags = { Linear = true } },
+                [12] = { 1, Flags = { Linear = true } },
+                [30] = { 2, Flags = { Linear = true } },
+            }
+        },
+        Textizo1 = Fuse.Textizo {
+            Inputs = {
+                -- ... the rest of the preset ...
+                InSyncEnable = Input { Value = 1, },
+                InSyncWords = Input { SourceOp = "Textizo1SyncWords", Source = "Value", },
+            },
+        },
+    },
+}
+```
 
 ## 6. Eases
 

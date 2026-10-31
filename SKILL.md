@@ -102,13 +102,14 @@ You can also start from an existing preset: `python tools/textizo_preset.py to-s
 **Top level:**
 
 - `name`: the short preset name, for example `Textizo-07A` (`07A` works too); the file becomes `Textizo-07A.setting`.
-- `text`, `font`, `style`, `size`: as in guide section 3.
+- `text`, `font`, `style`, `size`: as in guide section 3. The text can be in any language: Arabic, Hebrew, Chinese and the like join and run in the right direction by themselves. Pick a font that has the language (guide section 3, "Other languages"), or Textizo borrows one for those letters.
 - `center`: `[x, y]`. Setting y to `"auto"` centres the block in a 16:9 frame, using Arial's capital height (close enough for the other safe fonts). For other frame shapes, add `"aspect"` (width / height, for example 0.5625 for 9:16); `check` takes `--aspect` too.
 - `align`: `left`, `center` or `right`.
 - `tracking`, `line_spacing`, `rotation`, `alpha`.
 - `color`: a shortcut for element 1's colour.
 - `motion_blur`: `false`, `true`, or `{"shutter", "quality", "bias", "spread"}`.
 - `in`, `out`: the animation rows (below).
+- `in_direction`, `out_direction`: the order the pieces go in on that page: `reading` (the default; right to left for Arabic and Hebrew), `ltr` or `rtl` (guide section 4, "Direction").
 - `elements`: the shading layers (below).
 - `inputs`: optional raw overrides, `{"InputID": number | "text" | [x, y] | {"fuid": "id"}}`. Use only IDs whose `role` is `public` in `reference/inputs.json`.
 - `notes`: ignored; use it for your own comments.
@@ -142,6 +143,8 @@ Rows you leave out are written as off.
 Elements 2 to 8 that you leave out are written as off.
 
 **Each listed element starts from Textizo's own defaults for that element** (guide section 7). For example, element 3 has softness 0.01, so give `softness` and `offset` explicitly.
+
+**Sync to Speech** (guide section 5) times the entrance to a voice with a keyed Words Shown slider. It belongs to one video, not to a preset, and the builder doesn't key splines. When the user gives word times and asks for it, add the spline and the two inputs to the built file by hand as the guide shows, then run `check` on it.
 
 **Word or line boxes** only follow rows animated at their own level (guide section 7). If letters animate inside a word box, add a `by: "words"` Opacity row on that page, or the box shows before its letters arrive. The checker warns about this.
 

@@ -342,20 +342,53 @@ def describe(value):
 
 # --------------------------------------------------------------------------- timing (as the node computes it)
 
+MARK_RANGES = ((0x0300, 0x036F), (0x0591, 0x05BD), (0x05BF, 0x05BF), (0x05C1, 0x05C2), (0x05C4, 0x05C5),
+               (0x05C7, 0x05C7), (0x0610, 0x061A), (0x064B, 0x065F), (0x0670, 0x0670), (0x06D6, 0x06DC),
+               (0x06DF, 0x06E4), (0x06E7, 0x06E8), (0x06EA, 0x06ED), (0x0E31, 0x0E31), (0x0E34, 0x0E3A),
+               (0x0E47, 0x0E4E), (0xFE20, 0xFE2F))
+CJK_RANGES = ((0x3040, 0x30FF), (0x31F0, 0x31FF), (0x3400, 0x4DBF), (0x4E00, 0x9FFF), (0xF900, 0xFAFF),
+              (0x20000, 0x2FFFF))
+INVISIBLE_RANGES = ((0x200B, 0x200F), (0x202A, 0x202E), (0x2066, 0x2069), (0xFEFF, 0xFEFF), (0x061C, 0x061C))
+LAM, ALEFS = 0x0644, (0x0622, 0x0623, 0x0625, 0x0627)
+
+
+def in_ranges(code, ranges):
+    return any(lo <= code <= hi for lo, hi in ranges)
+
+
 def count_groups(text, by):
+    """Letters, words or lines as Textizo counts them: accent and vowel marks belong to their
+    letter, an Arabic lam + alef is one letter, each Chinese or Japanese character is a word."""
     text = (text or "").replace("\r\n", "\n").replace("\r", "\n")
     letters = words = lines = 0
     for line in text.split("\n"):
-        in_word = has_glyph = False
-        for ch in line:
+        chars = [ch for ch in line if not in_ranges(ord(ch), INVISIBLE_RANGES)]
+        in_word = has_glyph = previous_cjk = False
+        skip = set()
+        for index, ch in enumerate(chars):
+            code = ord(ch)
+            if index in skip:
+                continue
             if ch in " \t":
-                in_word = False
+                in_word = previous_cjk = False
+            elif in_ranges(code, MARK_RANGES) and has_glyph:
+                continue
             else:
+                if code == LAM:
+                    after = index + 1
+                    while after < len(chars) and in_ranges(ord(chars[after]), MARK_RANGES):
+                        after += 1
+                    if after < len(chars) and ord(chars[after]) in ALEFS:
+                        skip.add(after)
+                cjk = in_ranges(code, CJK_RANGES)
+                if in_word and (cjk or (previous_cjk and ch.isalpha())):
+                    in_word = False
                 letters += 1
                 has_glyph = True
                 if not in_word:
                     words += 1
                     in_word = True
+                previous_cjk = cjk
         if has_glyph:
             lines += 1
     return max(1, {"letters": letters, "words": words, "lines": lines}.get(by, letters))
@@ -404,7 +437,8 @@ def check_type(spec, value):
     """None when `value` fits the input's data type, else a short reason."""
     dtype = spec.get("type")
     if isinstance(value, Ref):
-        return None if dtype == "LookUpTable" else "is connected to another node"
+        # Words Shown (Sync to Speech) is keyed to the voice: a spline drives it.
+        return None if dtype == "LookUpTable" or spec.get("keyed") else "is connected to another node"
     if dtype == "Number":
         if not is_number(value):
             return "needs a number"
@@ -971,7 +1005,9 @@ PIVOTS = ("left", "center", "right")
 ELEMENT_KEYS = {"enabled", "appearance", "color", "opacity", "thickness", "offset", "softness",
                 "border_level", "extend", "round", "gradient"}
 SPEC_KEYS = {"name", "text", "font", "style", "size", "center", "align", "tracking", "line_spacing", "rotation",
-             "alpha", "color", "motion_blur", "in", "out", "elements", "inputs", "aspect", "notes"}
+             "alpha", "color", "motion_blur", "in", "out", "in_direction", "out_direction", "elements", "inputs",
+             "aspect", "notes"}
+DIRECTIONS = ("reading", "ltr", "rtl")
 BY_ALIASES = {"letter": "letters", "word": "words", "line": "lines"}
 
 
@@ -1043,6 +1079,11 @@ def build_preset(spec, data):
         rows = spec.get(key, {}) or {}
         if not isinstance(rows, dict):
             raise ValueError('"%s" must be an object like {"opacity": {...}, "position": {...}}' % key)
+        direction = spec.get(key + "_direction")
+        if direction is not None:
+            if direction not in DIRECTIONS:
+                raise ValueError("%s_direction must be one of: %s" % (key, ", ".join(DIRECTIONS)))
+            put(page + "Direction", fu_id(direction))
         resolved = {}
         for name, row in rows.items():
             row_key = ROW_ALIASES.get(name, name)
@@ -1379,6 +1420,8 @@ def preset_to_spec(path, data):
                 r["pivot"] = plain(get(prefix + "Pivot"))
             rows["position" if row == "center" else row] = r
         spec[key] = rows
+        if plain(get(page + "Direction")) in ("ltr", "rtl"):
+            spec[key + "_direction"] = plain(get(page + "Direction"))
     active = fuid(values.get("ShadingActiveElement")) or "element_1"
     active_index = int(active.split("_")[-1])
     elements = {}

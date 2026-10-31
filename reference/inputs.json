@@ -3780,6 +3780,52 @@
    "integer": true,
    "hidden": true
   },
+  "InDirection": {
+   "label": "Direction",
+   "page": "In",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "reading",
+     "label": "Reading Order"
+    },
+    {
+     "id": "ltr",
+     "label": "Left to Right"
+    },
+    {
+     "id": "rtl",
+     "label": "Right to Left"
+    }
+   ],
+   "default": "reading"
+  },
+  "InSyncEnable": {
+   "label": "Sync to Speech",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "InSyncWords": {
+   "label": "Words Shown",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "min": 0,
+   "slider": [
+    0,
+    20
+   ],
+   "hidden": true,
+   "keyed": true
+  },
   "InopacityEnable": {
    "label": "Opacity",
    "page": "In",
@@ -6241,6 +6287,28 @@
    ],
    "integer": true,
    "hidden": true
+  },
+  "OutDirection": {
+   "label": "Direction",
+   "page": "Out",
+   "type": "FuID",
+   "control": "MultiButtonIDControl",
+   "role": "public",
+   "options": [
+    {
+     "id": "reading",
+     "label": "Reading Order"
+    },
+    {
+     "id": "ltr",
+     "label": "Left to Right"
+    },
+    {
+     "id": "rtl",
+     "label": "Right to Left"
+    }
+   ],
+   "default": "reading"
   },
   "OutopacityEnable": {
    "label": "Opacity",
