@@ -255,7 +255,7 @@ A complete Explosion row (this one is an entrance: 7 letters fly in, each for 14
 
 An Out Explosion row uses the same 17 inputs with `Out` instead of `In` (`OutexplosionEnable`, `OutexplosionDamping`, `OutexplosionSpeed`, …), minus `OutexplosionStartValue`.
 
-**Never write any other row input** (apart from a Tracking row's `Pivot`). The hidden legacy inputs and the curve inputs are not needed. The only page inputs are `InDirection`, `OutDirection` and Sync to Speech's `InSyncEnable` and `InSyncWords` (section 5).
+**Never write any other row input** (apart from a Tracking row's `Pivot`). The hidden legacy inputs and the curve inputs are not needed. The only page inputs are `InDirection`, `OutDirection`, Sync to Speech's `InSyncEnable` and `InSyncWords`, Stop at Frame's `InStopEnable`, `InStopFrame`, `OutStopEnable` and `OutStopFrame`, and the timing anchors `InStartAt`, `OutAlignEnd`, `OutEndAt` and `OutBeforeEnd` (section 5).
 
 ## 5. Timing
 
@@ -300,6 +300,15 @@ Out Start Frame = Out End Frame - (S + D x (N - 1))
 For example, a 5-second clip at 24 fps has frames 0 to 119, so the exit starts around 100 and ends around 112 to 116. If the user changes the clip length later, they move every Out row's Start and End Frame by the same amount.
 
 All rows of one page usually start on the same frame. Give rows slightly different S values to layer them, for example opacity 10 frames, blur 14 and position 14.
+
+**Stop at Frame** ends a page part way. `InStopEnable = Input { Value = 1, },` turns it on for the In page, and `InStopFrame` (a whole frame, counted from the clip's first frame like Start and End Frame) says where. From that frame on, every piece keeps the look it has there: the last letters of a blur reveal stay soft, for example. Put the stop between the rows' Start and End Frames. The Out page has its own `OutStopEnable` and `OutStopFrame`, and one page's stop doesn't hold the other page. With Sync to Speech, the words on screen at the stop frame are the ones that stay.
+
+**Start At and Align to End** move a page's rows as a whole, keeping their lengths and gaps.
+
+- `InStartAt` (frames after the clip's first frame) makes every In row count from that frame.
+- `OutAlignEnd = Input { Value = 1, },` moves the Out rows so their last piece lands `OutBeforeEnd` frames before the clip's last frame (0: on the last frame), whatever the clip's length. Trimming or stretching the clip keeps the exit at its end.
+- `OutEndAt` (frames from the clip's first frame) replaces the clip's end while it is above 0. It is for one long comp that plays several captions, keyed per caption.
+- Presets usually leave Start At at 0 and Align to End off; the Out rows then count from the clip's start, as in the examples.
 
 **Sync to Speech** times the entrance to a voice instead of to frames. `InSyncEnable = Input { Value = 1, },` turns it on. Then the Words Shown slider (`InSyncWords`, whole numbers) says how many words are on screen; the user keys it in the Inspector: 1 on the frame the first word is spoken, 2 on the second word, and so on.
 

@@ -3826,6 +3826,44 @@
    "hidden": true,
    "keyed": true
   },
+  "InStopEnable": {
+   "label": "Stop at Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "InStopFrame": {
+   "label": "Stop Frame",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "InStartAt": {
+   "label": "Start At",
+   "page": "In",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true
+  },
   "InopacityEnable": {
    "label": "Opacity",
    "page": "In",
@@ -6309,6 +6347,69 @@
     }
    ],
    "default": "reading"
+  },
+  "OutStopEnable": {
+   "label": "Stop at Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OutStopFrame": {
+   "label": "Stop Frame",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 10,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutAlignEnd": {
+   "label": "Align to End",
+   "page": "Out",
+   "type": "Number",
+   "control": "CheckboxControl",
+   "role": "public",
+   "default": 0,
+   "integer": true
+  },
+  "OutEndAt": {
+   "label": "End At",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
+  },
+  "OutBeforeEnd": {
+   "label": "Before End",
+   "page": "Out",
+   "type": "Number",
+   "control": "SliderControl",
+   "role": "public",
+   "default": 0,
+   "max": 100000,
+   "slider": [
+    0,
+    250
+   ],
+   "integer": true,
+   "hidden": true
   },
   "OutopacityEnable": {
    "label": "Opacity",

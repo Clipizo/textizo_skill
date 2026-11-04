@@ -605,6 +605,7 @@ def check_tool(tool_name, tool, spec_inputs, report, clip_frames=None, aspect=16
     out_start = None
     last_frame = None
     rows_per_page = {"In": 0, "Out": 0}
+    page_window = {"In": [None, None], "Out": [None, None]}  # first Start Frame, last landing
     followers_with_opacity = {"In": set(), "Out": set()}
     followers_used = {"In": set(), "Out": set()}
     for page in PAGES:
@@ -670,6 +671,9 @@ def check_tool(tool_name, tool, spec_inputs, report, clip_frames=None, aspect=16
             else:
                 out_start = start if out_start is None else min(out_start, start)
             last_frame = last_end if last_frame is None else max(last_frame, last_end)
+            window = page_window[page]
+            window[0] = start if window[0] is None else min(window[0], start)
+            window[1] = last_end if window[1] is None else max(window[1], last_end)
             if clip_frames is not None and last_end > clip_frames - 1 + 1e-6:
                 report.warn("%s ends on frame %s, after the clip's last frame (%d)" % (prefix, fmt_num(last_end), clip_frames - 1))
             # House style (guide section 10): notes only.
@@ -689,6 +693,32 @@ def check_tool(tool_name, tool, spec_inputs, report, clip_frames=None, aspect=16
                     prefix, by[:-1], span))
             rows_out.append((page, row, by, groups, round_int(start), round_int(end), stagger, span, delay, ease,
                              describe(sv) if page == "In" else "", describe(ev)))
+    # Stop at Frame: from its stop frame a page holds as it looks there.
+    for page in PAGES:
+        if not (has(page + "StopEnable") and num(page + "StopEnable") >= 0.5):
+            continue
+        stop = max(0, round_int(num(page + "StopFrame")))
+        first, last = page_window[page]
+        if first is None:
+            report.warn("%sStopEnable is on but no %s row is: Stop at Frame changes nothing" % (page, page))
+        elif page == "In" and has("InSyncEnable") and num("InSyncEnable") >= 0.5:
+            report.note("the In page holds from frame %d on, with the words shown there (Stop at Frame)" % stop)
+        elif stop <= first:
+            report.warn("%sStopFrame %d is not after the %s rows start (frame %s): the page holds before anything moves"
+                        % (page, stop, page, fmt_num(first)))
+        elif stop >= last:
+            report.note("%sStopFrame %d is after the %s rows land (frame %s): it changes nothing"
+                        % (page, stop, page, fmt_num(round(last, 1))))
+        else:
+            report.note("the %s page holds from frame %d on, as it looks there (Stop at Frame)" % (page, stop))
+            if page == "In":
+                in_done = min(in_done, stop)
+    # Timing anchors move a page's rows as a whole; the frames above are as set up.
+    if has("InStartAt") and num("InStartAt") > 0:
+        report.note("Start At: the In rows count from frame %d" % round_int(num("InStartAt")))
+    if has("OutAlignEnd") and num("OutAlignEnd") >= 0.5:
+        report.note("Align to End: the Out rows keep their lengths and gaps, and their last piece lands %d frames "
+                    "before the clip's last frame at any clip length" % max(0, round_int(num("OutBeforeEnd"))))
     if snappy_rows:
         report.note("very snappy rows, each piece pops in under 2 frames (fine for a one-after-another pop): %s"
                     % ", ".join(snappy_rows))
@@ -1005,8 +1035,8 @@ PIVOTS = ("left", "center", "right")
 ELEMENT_KEYS = {"enabled", "appearance", "color", "opacity", "thickness", "offset", "softness",
                 "border_level", "extend", "round", "gradient"}
 SPEC_KEYS = {"name", "text", "font", "style", "size", "center", "align", "tracking", "line_spacing", "rotation",
-             "alpha", "color", "motion_blur", "in", "out", "in_direction", "out_direction", "elements", "inputs",
-             "aspect", "notes"}
+             "alpha", "color", "motion_blur", "in", "out", "in_direction", "out_direction", "in_stop", "out_stop", "in_start_at", "out_from_end",
+             "elements", "inputs", "aspect", "notes"}
 DIRECTIONS = ("reading", "ltr", "rtl")
 BY_ALIASES = {"letter": "letters", "word": "words", "line": "lines"}
 
@@ -1084,6 +1114,25 @@ def build_preset(spec, data):
             if direction not in DIRECTIONS:
                 raise ValueError("%s_direction must be one of: %s" % (key, ", ".join(DIRECTIONS)))
             put(page + "Direction", fu_id(direction))
+        # Stop at Frame: from this frame (counted from the clip's first frame) the page holds.
+        stop = spec.get(key + "_stop")
+        if stop is not None:
+            if isinstance(stop, bool) or not is_number(stop) or stop < 0:
+                raise ValueError("%s_stop must be a frame number, 0 or more, counted from the clip's first frame" % key)
+            put(page + "StopEnable", 1)
+            put(page + "StopFrame", round_int(stop))
+        # Start At: the In rows count from this frame. Align to End: the Out rows keep their
+        # lengths and gaps and land `out_from_end` frames before the clip's last frame.
+        anchor_key = "in_start_at" if page == "In" else "out_from_end"
+        anchor = spec.get(anchor_key)
+        if anchor is not None:
+            if isinstance(anchor, bool) or not is_number(anchor) or anchor < 0:
+                raise ValueError("%s must be a number of frames, 0 or more" % anchor_key)
+            if page == "In":
+                put("InStartAt", round_int(anchor))
+            else:
+                put("OutAlignEnd", 1)
+                put("OutBeforeEnd", round_int(anchor))
         resolved = {}
         for name, row in rows.items():
             row_key = ROW_ALIASES.get(name, name)
@@ -1313,7 +1362,7 @@ def used_preset_names(folders):
 def cmd_next_name(args):
     folders = [MY_PRESETS]
     for target in args.to or []:
-        folders.append(os.path.expanduser({"resolve": resolve_settings_dir(), "downloads": downloads_dir()}.get(target, target)))
+        folders.append(target_folder(target))
     used = used_preset_names(folders)
     if args.variant is not None:
         letters = used.get(args.variant, set())
@@ -1422,6 +1471,12 @@ def preset_to_spec(path, data):
         spec[key] = rows
         if plain(get(page + "Direction")) in ("ltr", "rtl"):
             spec[key + "_direction"] = plain(get(page + "Direction"))
+        if is_number(get(page + "StopEnable")) and get(page + "StopEnable") >= 0.5:
+            spec[key + "_stop"] = plain(get(page + "StopFrame"))
+        if page == "In" and is_number(get("InStartAt")) and get("InStartAt") > 0:
+            spec["in_start_at"] = plain(get("InStartAt"))
+        if page == "Out" and is_number(get("OutAlignEnd")) and get("OutAlignEnd") >= 0.5:
+            spec["out_from_end"] = plain(get("OutBeforeEnd")) if is_number(get("OutBeforeEnd")) else 0
     active = fuid(values.get("ShadingActiveElement")) or "element_1"
     active_index = int(active.split("_")[-1])
     elements = {}
@@ -1517,6 +1572,11 @@ def downloads_dir():
     return os.path.join(os.path.expanduser("~"), "Downloads", "Textizo Presets")
 
 
+def target_folder(target):
+    named = {"resolve": resolve_settings_dir(), "downloads": downloads_dir()}
+    return os.path.expanduser(named.get(target, target))
+
+
 def cmd_where(_args):
     for label, path in (("resolve", resolve_settings_dir()), ("downloads", downloads_dir())):
         print("%-9s %s  (%s)" % (label, path, "exists" if os.path.isdir(path) else "will be created"))
@@ -1525,8 +1585,7 @@ def cmd_where(_args):
 
 def cmd_install(args):
     data = load_inputs()
-    target = {"resolve": resolve_settings_dir(), "downloads": downloads_dir()}.get(args.to, args.to)
-    target = os.path.expanduser(target)
+    target = target_folder(args.to)
     status = 0
     for path in args.files:
         report = Report()

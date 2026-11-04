@@ -110,6 +110,9 @@ You can also start from an existing preset: `python tools/textizo_preset.py to-s
 - `motion_blur`: `false`, `true`, or `{"shutter", "quality", "bias", "spread"}`.
 - `in`, `out`: the animation rows (below).
 - `in_direction`, `out_direction`: the order the pieces go in on that page: `reading` (the default; right to left for Arabic and Hebrew), `ltr` or `rtl` (guide section 4, "Direction").
+- `in_stop`, `out_stop`: Stop at Frame, a frame counted from the clip's first frame. From there that page holds as it is, for example the last letters of a reveal still blurred. Leave it out to play the whole page (guide section 5, "Stop at Frame").
+- `in_start_at`: Start At, frames after the clip's first frame. Every In row counts from there. Leave it out to start at the clip's first frame.
+- `out_from_end`: turns Align to End on. The Out rows keep their lengths and gaps and their last piece lands this many frames before the clip's last frame, at any clip length (0 = on the last frame) (guide section 5, "Start At and Align to End").
 - `elements`: the shading layers (below).
 - `inputs`: optional raw overrides, `{"InputID": number | "text" | [x, y] | {"fuid": "id"}}`. Use only IDs whose `role` is `public` in `reference/inputs.json`.
 - `notes`: ignored; use it for your own comments.
