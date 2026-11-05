@@ -134,7 +134,7 @@ So always write every row's `Enable`, every element's `Enable`, and the full set
 | `Size` | text size. 1 is the same as a Text+ node at 0.08 | usually 0.6 to 2.8 (see section 9) |
 | `Center` | where the **first line's baseline** sits. 0 to 1 across the frame; y goes up (0 is the bottom) | `{ 0.5, 0.5 }` |
 | `Alignment` | how lines sit around Center X | `0` left (text starts at Center X), `1` center, `2` right |
-| `Tracking` | extra space between letters, in frame widths (0.01 is about 19 px at 1920 wide) | `0`. Tight Apple look: `-0.003` |
+| `Tracking` | extra space between letters, in frame widths (0.01 is about 19 px at 1920 wide). Arabic and Persian words keep their letters joined: they get it between words only | `0`. Tight Apple look: `-0.003` |
 | `LineSpacing` | distance between lines (multiplier) | `1` |
 | `Rotation` | turns the whole text, in degrees | `0` |
 | `Red`, `Green`, `Blue` | tints Shading element 1. **Keep them at 1** and set colours on the Shading elements | `1` |
@@ -189,7 +189,7 @@ Each row's ID is the page, then the row, then the field. For example, `In` + `op
 | `blur` | extra softness: 0.1 is about 11 px of blur at 1080p | 0.1 to 0 | Typical 0.08 to 0.15. Values above about 0.27 add nothing at 1080p. It also blurs outlines and shadows. |
 | `center` | **offset** from where the text sits, `{ x, y }`. x is in frame widths and y in frame heights; +y is up | `{ 0, 0 }` to `{ 0, 0 }` | `{ 0, -0.06 }` starts 6% of the frame height lower |
 | `size` | scale around each piece's own centre: 1 is normal and 0 is gone | 0 to 1 | 1.1 to 1 gives a gentle settle; 0 to 1 is a pop |
-| `tracking` | spreads letters (or words) apart. The value is the step between neighbours, in frame widths. `Pivot` sets what stays put (see "Tracking extra" below) | 0 to 0 | 0.05 to 0 gives letters that gather in |
+| `tracking` | spreads letters (or words) apart; an Arabic or Persian word moves as one piece. The value is the step between neighbours, in frame widths. `Pivot` sets what stays put (see "Tracking extra" below) | 0 to 0 | 0.05 to 0 gives letters that gather in |
 | `rotation` | degrees around each piece's centre | 0 to 0 | -120 to 0 gives a spin in |
 | `explosion` | distance each piece flies, in frame widths, along its own random direction (any direction, up and down included). Each piece goes 0.45 to 1.25 times the value | 0 to 1 | Textizo's default of 0 to 1 blows the letters apart *during* the entrance. For an entrance, use 0.3 to 0.6 down to 0. To fly away on Out, use 1 to 1.5 and fade out with an Opacity row too |
 
