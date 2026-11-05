@@ -2,7 +2,7 @@
 
 Let your AI make **Textizo** presets: animated text for DaVinci Resolve, ready to load. Describe what you want in plain words, for example *"a bouncy pink title"* or *"an Apple-style reveal for 'Coming soon'"*. The AI writes the preset, checks it, and saves it where you want.
 
-This kit is made for Textizo 1.0 (Clipizo).
+This kit is made for Textizo (Clipizo); `reference/inputs.json` names the version it was built from.
 
 ## Two ways to use it
 

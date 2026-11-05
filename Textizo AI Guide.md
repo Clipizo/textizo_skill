@@ -1,6 +1,6 @@
 # Textizo AI Guide
 
-For **Textizo 1.0** (Clipizo) in DaVinci Resolve's Fusion page. Give this file to any AI chat, such as ChatGPT, Claude, Gemini or Copilot, and it can write ready-to-use animated text presets for you. Textizo is available at clipizo.com.
+For **Textizo** (Clipizo) in DaVinci Resolve's Fusion page. Give this file to any AI chat, such as ChatGPT, Claude, Gemini or Copilot, and it can write ready-to-use animated text presets for you. Textizo is available at clipizo.com.
 
 ---
 
